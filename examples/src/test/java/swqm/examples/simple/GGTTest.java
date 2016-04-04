@@ -23,7 +23,7 @@ public class GGTTest {
 		examples.add(10);
 		GGT ggt = new GGT(examples);
 		int ggtValue = ggt.get();
-		Assert.assertEquals(5, ggtValue);
+		Assert.assertEquals(4, ggtValue);
 	}
 
 	@Test

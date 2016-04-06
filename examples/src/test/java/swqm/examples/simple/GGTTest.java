@@ -20,7 +20,7 @@ public class GGTTest {
 		// execute
 		int ggtValue = ggt.get();
 		//verify 
-		Assert.assertEquals(4, ggtValue);
+		Assert.assertEquals(5, ggtValue);
 		//tear down 
 	}
 	
@@ -44,9 +44,9 @@ public class GGTTest {
 	public void testEmptyGGT() {
 		// setup
 		List<Integer> examples = new ArrayList<Integer>();
-		GGT ggt = new GGT(examples);
 		try {
 			// execute
+			GGT ggt = new GGT(examples);
 			ggt.get();
 			//verify 
 			Assert.fail("Expected exception");

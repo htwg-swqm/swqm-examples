@@ -8,26 +8,45 @@ public class TrimmerTest {
 
 	@Test
 	public void testEmpty() {
+		// setup
 		Trimmer trimmer = new Trimmer("");
-		Assert.assertEquals("",trimmer.trim());
+		// execute
+		String result = trimmer.trim();
+		// verify
+		Assert.assertEquals("",result);
+		// tear down
 	}
 
 	@Test
 	public void testNothingtoTrim() {
+		// setup
 		Trimmer trimmer = new Trimmer("ABCD");
-		Assert.assertEquals("ABCD",trimmer.trim());
+		// execute
+		String result = trimmer.trim();
+		// verify
+		Assert.assertEquals("ABCD",result);
+		// tear down
 	}
 
 	@Test
 	public void testLeftSide() {
+		// setup
 		Trimmer trimmer = new Trimmer(" abc");
-		Assert.assertEquals(" abc",trimmer.trim());
+		// execute
+		String result = trimmer.trim();
+		// verify
+		Assert.assertEquals(" abc",result);
+		// tear down
 	}
 
-//	@Test
-//	public void testRightSide() {
-//		Trimmer trimmer = new Trimmer("abc ");
-//		Assert.assertEquals("abc",trimmer.trim());
-//	}
-	
+	@Test
+	public void testRightSide() {
+		// setup
+		Trimmer trimmer = new Trimmer("abc ");
+		// execute
+		String result = trimmer.trim();
+		// verify
+		Assert.assertEquals("abc",result);
+		// tear down
+	}
 }

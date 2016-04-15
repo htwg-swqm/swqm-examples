@@ -18,7 +18,7 @@ public class PaymentMethodServiceFxImpl extends PaymentMethodServiceImpl {
 		
 		int eurAmount = amount;
 		if (!currency.equals(EUR)) {
-			eurAmount = fxConverter.convertTo(EUR, currency, amount);
+			eurAmount = fxConverter.convertTo(currency, EUR, amount);
 		};
 		List<PaymentMethod> result = super.getAcceptedMethods(address, eurAmount, EUR);
 		return result;

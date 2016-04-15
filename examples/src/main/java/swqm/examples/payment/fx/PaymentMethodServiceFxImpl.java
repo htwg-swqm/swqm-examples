@@ -17,11 +17,8 @@ public class PaymentMethodServiceFxImpl extends PaymentMethodServiceImpl {
 			throws IllegalArgumentException {
 		
 		int eurAmount = amount;
-		if (currency == null) {
-			throw new IllegalArgumentException("Currency is null!");
-		}
 		if (!currency.equals(EUR)) {
-			eurAmount = fxConverter.convertTo(currency, EUR, amount);
+			eurAmount = fxConverter.convertTo(EUR, currency, amount);
 		};
 		List<PaymentMethod> result = super.getAcceptedMethods(address, eurAmount, EUR);
 		return result;

@@ -1,28 +1,28 @@
 package swqm.exercises.ordermanagment;
 
 public class OrderItem {
-	private int itemId;
-	private int number;
-	private int salesPrice;
-	
-	public OrderItem(int itemId, int number, int salesPrice) {
-		super();
-		this.itemId = itemId;
-		this.number = number;
-		this.salesPrice = salesPrice;
-	}
+  private int itemId;
+  private int number;
+  private int salesPrice;
 
-	public int getItemId() {
-		return itemId;
-	}
+  public OrderItem(int itemId, int number, int salesPrice) {
+    super();
+    this.itemId = itemId;
+    this.number = number;
+    this.salesPrice = salesPrice;
+  }
 
-	public int getNumber() {
-		return number;
-	}
+  public int getItemId() {
+    return itemId;
+  }
 
-	public int getSalesPrice() {
-		return salesPrice;
-	}
-	
-	
+  public int getNumber() {
+    return number;
+  }
+
+  public int getSalesPrice() {
+    return salesPrice;
+  }
+
+
 }

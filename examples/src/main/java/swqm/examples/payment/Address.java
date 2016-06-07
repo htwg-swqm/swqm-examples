@@ -1,75 +1,91 @@
 package swqm.examples.payment;
 
 public class Address implements Comparable<Address> {
-	private String id = null;
-	private String surname = null;
-	private String firstname = null;
-	private String street = null;
-	private String city = null;
-	private String postcode = null;
+  private String id = null;
+  private String surname = null;
+  private String firstname = null;
+  private String street = null;
+  private String city = null;
+  private String postcode = null;
 
-	public String getId() {
-		return this.id;
-	}
 
-	public String getSurname() {
-		return this.surname;
-	}
+  public Address() {
 
-	public String getFirstname() {
-		return this.firstname;
-	}
+  }
 
-	public String getStreet() {
-		return this.street;
-	}
+  public Address(String id, String surname, String firstname, String street, String city,
+      String postcode) {
+    super();
+    this.id = id;
+    this.surname = surname;
+    this.firstname = firstname;
+    this.street = street;
+    this.city = city;
+    this.postcode = postcode;
+  }
 
-	public String getCity() {
-		return this.city;
-	}
+  public String getId() {
+    return this.id;
+  }
 
-	public String getPostcode() {
-		return this.postcode;
-	}
+  public String getSurname() {
+    return this.surname;
+  }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+  public String getFirstname() {
+    return this.firstname;
+  }
 
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
+  public String getStreet() {
+    return this.street;
+  }
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
+  public String getCity() {
+    return this.city;
+  }
 
-	public void setStreet(String street) {
-		this.street = street;
-	}
+  public String getPostcode() {
+    return this.postcode;
+  }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+  public void setId(String id) {
+    this.id = id;
+  }
 
-	public void setPostcode(String postcode) {
-		this.postcode = postcode;
-	}
+  public void setSurname(String surname) {
+    this.surname = surname;
+  }
 
-	public String getFullname() {
-		return this.firstname + " " + this.surname;
-	}
+  public void setFirstname(String firstname) {
+    this.firstname = firstname;
+  }
 
-	public String getFulladdress() {
-		return this.street + " " + this.city + " " + this.postcode;
-	}
+  public void setStreet(String street) {
+    this.street = street;
+  }
 
-	public int compareTo(Address address) {
-		int compare = this.surname.compareToIgnoreCase(address.surname);
-		if (compare == 0) {
-			compare = this.firstname.compareToIgnoreCase(address.firstname);
-		}
-		return (compare);
-	}
+  public void setCity(String city) {
+    this.city = city;
+  }
+
+  public void setPostcode(String postcode) {
+    this.postcode = postcode;
+  }
+
+  public String getFullname() {
+    return this.firstname + " " + this.surname;
+  }
+
+  public String getFulladdress() {
+    return this.street + " " + this.city + " " + this.postcode;
+  }
+
+  public int compareTo(Address address) {
+    int compare = this.surname.compareToIgnoreCase(address.surname);
+    if (compare == 0) {
+      compare = this.firstname.compareToIgnoreCase(address.firstname);
+    }
+    return (compare);
+  }
 
 }

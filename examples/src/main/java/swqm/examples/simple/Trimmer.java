@@ -13,7 +13,7 @@ public class Trimmer {
     int st = 0;
     String result = value;
 
-    while ((st < len) && (value.charAt(st) <= ' ')) {
+    while (st < len && value.charAt(st) <= ' ') {
       st++;
     }
     while ((st < len) && (value.charAt(len - 1) <= ' ')) {

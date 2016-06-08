@@ -13,6 +13,16 @@ public class Address implements Comparable<Address> {
 
   }
 
+  /**
+   * Creates a new address.
+   * 
+   * @param id id of the address
+   * @param surname the surname
+   * @param firstname the firstname
+   * @param street the street
+   * @param city the city 
+   * @param postcode the postcode
+   */
   public Address(String id, String surname, String firstname, String street, String city,
       String postcode) {
     super();
@@ -80,6 +90,9 @@ public class Address implements Comparable<Address> {
     return this.street + " " + this.city + " " + this.postcode;
   }
 
+  /**
+   * Compares two addresses.
+   */
   public int compareTo(Address address) {
     int compare = this.surname.compareToIgnoreCase(address.surname);
     if (compare == 0) {

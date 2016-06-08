@@ -8,6 +8,11 @@ public class Trimmer {
     this.value = value;
   }
 
+  /**
+   * Trim a String.
+   * 
+   * @return the trimmed string.
+   */
   public String trim() {
     int len = value.length();
     int st = 0;

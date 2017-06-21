@@ -46,7 +46,7 @@ public class TrimmerTest {
 		// execute
 		String result = trimmer.trim();
 		// verify
-		Assert.assertEquals("abc",result);
+		Assert.assertEquals("abc ",result);
 		// tear down
 	}
 }
